@@ -1,0 +1,14 @@
+pipeline {
+    agent any
+    stages {
+        stage('Sonar Scan') {
+            steps {
+               sonar-scanner \
+  -Dsonar.projectKey=frontend \
+  -Dsonar.sources=. \
+  -Dsonar.host.url=http://18.207.241.47:9000 \
+  -Dsonar.login=2f7e9cbf5079973a6f2258d0676c937738515ef7
+            }
+        }
+    }
+}
