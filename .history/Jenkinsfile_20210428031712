@@ -50,7 +50,7 @@ pipeline {
             }
         stage('Packaging the artifacts'){
             steps {
-                sh "${COMPONENT_NAME}.${MAJOR_VERSION}.${BUILD_NUMBER}.zip static payment.ini requirements.txt ; ls -ltr"
+                sh "${COMPONENT_NAME}.${MAJOR_VERSION}.${BUILD_NUMBER}.zip stat payment.ini requirements.txt ; ls -ltr"
 
                 }
             }
