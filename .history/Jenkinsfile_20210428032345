@@ -44,7 +44,7 @@ pipeline {
         stage('Lint Check'){
             steps {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {                           
-                        sh  "jslint static/js/*.js "
+                        sh  "jslint static/*.js "
                     }   
                 }
             }
